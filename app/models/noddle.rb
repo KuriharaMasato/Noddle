@@ -1,0 +1,2 @@
+class Noddle < ApplicationRecord
+end

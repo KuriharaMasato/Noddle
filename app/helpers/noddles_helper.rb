@@ -1,0 +1,2 @@
+module NoddlesHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @noddle.title %>
+</p>
+
+<p>
+  <strong>Noddle:</strong>
+  <%= @noddle.noddle %>
+</p>
+
+<%= link_to 'Edit', edit_noddle_path(@noddle) %> |
+<%= link_to 'Back', noddles_path %>

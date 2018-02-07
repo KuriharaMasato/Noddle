@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Noddles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Noddle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noddles.each do |noddle| %>
+      <tr>
+        <td><%= noddle.title %></td>
+        <td><%= noddle.noddle %></td>
+        <td><%= link_to 'Show', noddle %></td>
+        <td><%= link_to 'Edit', edit_noddle_path(noddle) %></td>
+        <td><%= link_to 'Destroy', noddle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Noddle', new_noddle_path %>

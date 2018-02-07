@@ -1,0 +1,27 @@
+<%= form_with(model: noddle, local: true) do |form| %>
+  <% if noddle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(noddle.errors.count, "error") %> prohibited this noddle from being saved:</h2>
+
+      <ul>
+      <% noddle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :noddle_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :noddle %>
+    <%= form.text_field :noddle, id: :noddle_noddle %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
